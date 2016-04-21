@@ -26,15 +26,6 @@ RUN npm config set registry http://artifactory.hi.inet/npm \
     && npm install -g bower grunt-cli \
     && npm cache clean
 
-# ---------------------------------------------------------
-## CONFIGURE
-# ---------------------------------------------------------
-# Add sonar conf to access central
-#COPY sonar-runner.properties /opt/ss/develenv/platform/sonar-runner/conf/sonar-runner.properties
-# Run some configs
-RUN mkdir -p /etc/docker/certs.d/artifactory.hi.inet \
-    && cp /home/contint/CATID.cer /etc/docker/certs.d/artifactory.hi.inet/ca.crt \
-    && su - contint -c "npm config set registry http://artifactory.hi.inet/npm" \
 
 # ---------------------------------------------------------
 # Install xvfb and firefox, needed to run tests in browsers
