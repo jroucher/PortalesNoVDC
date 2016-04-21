@@ -44,6 +44,7 @@ RUN chmod a-w /etc/machine-id
 # INSTALL pip
 # ---------------------------------------------------------
 RUN easy_install pip
+RUN pip install --upgrade pip
 
 # ---------------------------------------------------------
 # INSTALL virtualEnv
