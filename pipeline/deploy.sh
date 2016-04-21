@@ -1,4 +1,7 @@
-echo ==============INSTALL chrome========================
+#!/bin/bash
+
+echo "This is a script to run on a Deploy"
+echo "==============INSTALL chrome========================"
 if [ ! -f "linux_signing_key.pub" ]; then
   echo "Downloading repository key"
   wget https://dl.google.com/linux/linux_signing_key.pub
@@ -10,37 +13,37 @@ if [ ! -f "linux_signing_key.pub" ]; then
 fi
 echo "Remove Key"
 rm linux_signing_key.pub*
-echo ==============INSTALL xvfb========================
+echo "==============INSTALL xvfb========================"
 sudo yum install -y xorg-x11-server-Xvfb-1.15.0-32.el7 gdk-pixbuf2
 startx &
-echo ==============INSTALL behave========================
+echo "==============INSTALL behave========================"
 sudo easy_install behave
-echo ==============DOWNLOAD pip========================
+echo "==============DOWNLOAD pip========================"
 if [ ! -f "get-pip.py" ]; then
   wget https://bootstrap.pypa.io/get-pip.py
 fi
-echo ==============INSTALL pip========================
+echo "==============INSTALL pip========================"
 sudo easy_install pip
 rm get-pip.py*
-echo ==============INSTALL virtualEnv========================
+echo "==============INSTALL virtualEnv========================"
 source /opt/rh/python27/enable
 which python
 
 pip install virtualenv
-echo ==============CREATE virtualEnv-2.7========================
+echo "==============CREATE virtualEnv-2.7========================"
 if [ ! -d "venv" ]; then
   rm -rf venv/
 fi
 ls -la
 virtualenv -p /opt/rh/python27/root/usr/bin/python venv
 ls -la
-echo ==============ACTIVATE virtualEnv-2.7========================
+echo "==============ACTIVATE virtualEnv-2.7========================"
 source venv/bin/activate
 which python
-echo ==============INSTALL requirements========================
+echo "==============INSTALL requirements========================"
 pip install --upgrade setuptools
 pip install -r requirements.txt
-echo ==============INSTALL driver========================
+echo "==============INSTALL driver========================"
 sudo yum install unzip
 ls -la bin
 if [ ! -f "bin/chromedriver_linux64.zip" ]; then
@@ -52,6 +55,4 @@ if [ ! -f "bin/chromedriver_linux64.zip" ]; then
   sudo chmod a+x /usr/local/bin/chromedriver
 fi
 netstat -putan
-echo ==============EXECUTE tests========================
-ls -la *
-behave tests/web
+echo "==============EXECUTE tests========================"
