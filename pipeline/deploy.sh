@@ -48,6 +48,9 @@ echo "==============INSTALL driver========================"
 sudo yum install unzip
 ls -la bin
 if [ ! -f "bin/chromedriver" ]; then
+  if [ ! -d "bin" ]; then
+    mkdir bin
+  fi
   wget -N http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip -P bin/
   unzip bin/chromedriver_linux64.zip -d bin/
   chmod a+x bin/chromedriver
