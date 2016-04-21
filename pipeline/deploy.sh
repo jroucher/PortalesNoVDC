@@ -40,10 +40,10 @@ echo "This is a script to run on a Deploy"
 # echo "==============ACTIVATE virtualEnv-2.7========================"
 # source venv/bin/activate
 # which python
-echo "==============INSTALL requirements========================"
+# echo "==============INSTALL requirements========================"
 # pip install --upgrade setuptools
 # pip install -r requirements.txt
-echo "==============INSTALL driver========================"
+# echo "==============INSTALL driver========================"
 #sudo yum install unzip
 ls -la *
 # if [ ! -f "bin/chromedriver_linux64.zip" ]; then

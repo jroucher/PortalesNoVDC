@@ -1,4 +1,4 @@
-FROM artifactory.hi.inet/dcip/minimal:6
+FROM artifactory.hi.inet/dcip/minimal:7
 
 EXPOSE 9515:9515
 
