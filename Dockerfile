@@ -71,9 +71,3 @@ RUN pip install selenium
 # INSTALL requirements
 # ---------------------------------------------------------
 RUN pip install --upgrade setuptools
-RUN pip install -r requirements.txt
-
-# ---------------------------------------------------------
-# DOWNLOAD
-# ---------------------------------------------------------
-RUN wget https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz

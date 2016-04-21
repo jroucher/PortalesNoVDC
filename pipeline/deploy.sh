@@ -55,3 +55,9 @@ ls -la *
 #   sudo chmod a+x /usr/local/bin/chromedriver
 # fi
 # netstat -putan
+pip install -r requirements.txt
+
+# ---------------------------------------------------------
+# DOWNLOAD
+# ---------------------------------------------------------
+wget https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz
