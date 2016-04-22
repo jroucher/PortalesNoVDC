@@ -56,7 +56,7 @@ echo "This is a script to run on a Deploy"
 # fi
 # netstat -putan
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements.txt --ignore-installed
 
 # ---------------------------------------------------------
 # DOWNLOAD
