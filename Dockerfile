@@ -59,22 +59,13 @@ RUN easy_install behave
 # ---------------------------------------------------------
 # CREATING & ACTIVATE venv
 # ---------------------------------------------------------
-RUN virtualenv /home/contint/workspace/vdc/portalesnovdc/venv
+RUN virtualenv venv
 
 
 # ---------------------------------------------------------
 # INSTALL selenium
 # ---------------------------------------------------------
 RUN pip install selenium
-
-# ---------------------------------------------------------
-# INSTALL firefox webdriver
-# ---------------------------------------------------------
-RUN pwd > tmp.txt
-RUN tail tmp.txt
-RUN wget https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz
-RUN gzip -d wires-0.6.2-linux64.gz
-export PATH=$PATH:/home/contint/workspace/vdc/portalesnovdc/
 
 # ---------------------------------------------------------
 # INSTALL requirements
