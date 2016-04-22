@@ -70,9 +70,10 @@ RUN pip install selenium
 # ---------------------------------------------------------
 # INSTALL firefox webdriver
 # ---------------------------------------------------------
-RUN pwd
+RUN pwd > tmp.txt
+RUN tail tmp.txt
 RUN wget https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz
-RUN gzip -d /home/contint/workspace/vdc/portalesnovdc/wires-0.6.2-linux64.gz
+RUN gzip -d wires-0.6.2-linux64.gz
 export PATH=$PATH:/home/contint/workspace/vdc/portalesnovdc/
 
 # ---------------------------------------------------------
