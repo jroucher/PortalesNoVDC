@@ -59,7 +59,7 @@ RUN easy_install behave
 # ---------------------------------------------------------
 # CREATING & ACTIVATE venv
 # ---------------------------------------------------------
-RUN virtualenv venv
+RUN virtualenv /home/contint/workspace/vdc/portalesnovdc/venv
 
 
 # ---------------------------------------------------------
