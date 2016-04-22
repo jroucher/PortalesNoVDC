@@ -2,5 +2,5 @@
 
 echo "This is a script to run on a acceptanceTest"
 ls -la *
-source venv/bin/activate
+source /home/contint/workspace/vdc/portalesnovdc/venv/bin/activate
 behave tests/web
