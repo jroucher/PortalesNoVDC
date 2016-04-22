@@ -68,6 +68,13 @@ RUN virtualenv venv
 RUN pip install selenium
 
 # ---------------------------------------------------------
+# INSTALL firefox webdriver
+# ---------------------------------------------------------
+RUN wget https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz /home/contint/workspace/vdc/portalesnovdc/
+RUN gzip -d /home/contint/workspace/vdc/portalesnovdc/wires-0.6.2-linux64.gz
+export PATH=$PATH:/home/contint/workspace/vdc/portalesnovdc/
+
+# ---------------------------------------------------------
 # INSTALL requirements
 # ---------------------------------------------------------
 RUN pip install --upgrade setuptools
