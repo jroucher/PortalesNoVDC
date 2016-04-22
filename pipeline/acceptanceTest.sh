@@ -5,4 +5,4 @@ ls -la *
 pwd
 source /home/contint/workspace/vdc/portalesnovdc/venv/bin/activate
 export DISPLAY=:1
-behave tests/web
+xvfb-run behave tests/web
