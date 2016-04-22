@@ -45,7 +45,7 @@ echo "This is a script to run on a Deploy"
 # pip install -r requirements.txt
 # echo "==============INSTALL driver========================"
 #sudo yum install unzip
-ls -la *
+#ls -la *
 # if [ ! -f "bin/chromedriver_linux64.zip" ]; then
 #   wget -N http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip -P bin/
 #   unzip bin/chromedriver_linux64.zip -d bin/
@@ -60,4 +60,4 @@ pip install -r requirements.txt
 # ---------------------------------------------------------
 # DOWNLOAD
 # ---------------------------------------------------------
-wget https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz
+#wget https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz

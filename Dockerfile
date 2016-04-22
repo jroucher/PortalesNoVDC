@@ -60,7 +60,7 @@ RUN easy_install behave
 # CREATING & ACTIVATE venv
 # ---------------------------------------------------------
 RUN virtualenv venv
-RUN source venv/bin/activate
+
 
 # ---------------------------------------------------------
 # INSTALL selenium
