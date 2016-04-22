@@ -55,6 +55,7 @@ echo "This is a script to run on a Deploy"
 #   sudo chmod a+x /usr/local/bin/chromedriver
 # fi
 # netstat -putan
+source venv/bin/activate
 pip install -r requirements.txt
 
 # ---------------------------------------------------------
