@@ -94,7 +94,7 @@ def step_impl(context):
 def step_impl(context):
     assert_true(context.current_page.newPasswordCopyHasError())
 
-@then('message in node "{nodeId}" contain "{message}')
+@then('message in node "{nodeId}" contain "{message}"')
 def step_impl(context, nodeId, message):
-    messageResponse = context.current_page.getMessageOfNode(nodeId) + ''
+    messageResponse = context.current_page.getMessageOfNode(nodeId)
     assert_true(message in messageResponse, u'orignal message is `%s`' % messageResponse)

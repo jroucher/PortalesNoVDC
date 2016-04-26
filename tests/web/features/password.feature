@@ -27,23 +27,24 @@ Feature: Password change
   @VDCPORTALS-75
   Scenario: User is invalid
     Given goto page of change
-      And select language "es"
+      And select language "en"
      When set "username" to "QAUserMock"
       And set "password" to "Passw0rdMock"
       And set new password to "Passw0rd1"
       And send request
      Then LDAP node "Gbl" has error
-      But message in node "Gbl" contain "Usuario o contraseña no válidos"
+      But message in node "Gbl" contain "Invalid user name or password"
 
+  @VDCPORTALS-77
   Scenario: Original password is invalid
     Given goto page of change
-      And select language "es"
+      And select language "en"
      When set credentials of "UserA"
       And set "password" to "Passw0rdMock"
       And set new password to "Passw0rd1"
       And send request
      Then LDAP node "Gbl" has error
-      But message in node "Gbl" contain "Usuario o contraseña no válidos"
+      But message in node "Gbl" contain "Invalid user name or password"
 
   @VDCPORTALS-125
   Scenario: Password is changed
